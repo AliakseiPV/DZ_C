@@ -18,10 +18,15 @@ int max;
 if(A > B)
 {
     max = A;
+    Console.WriteLine("Max number: " + max);
 }
 else
 {
     max = B;
+    Console.WriteLine("Max number: " + max);
 }
 
-Console.WriteLine("Max number: " + max);
+if(A == B)
+{
+    Console.WriteLine("The numbers are equal");
+}
