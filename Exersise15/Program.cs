@@ -1,16 +1,12 @@
-﻿//Task 10
+﻿//Напишите программу, которая принимает на
+//вход цифру, обозначающую день недели, и проверяет,
+//является ли этот день выходным.
+//6 -> да
+//7 -> да
+//1 -> нет
 
 
-/*Console.WriteLine("Enter a three-digit number");
-int A = int.Parse(Console.ReadLine());
-
-A = (A / 10) % 10;
-Console.WriteLine("The second digit of the nimber is: " + A);*/
-
-///////////////////////////////////////////
-//Task 15
-
-/*Console.WriteLine("Write the number of the day of the week from 1 to 7");
+Console.WriteLine("Write the number of the day of the week from 1 to 7");
 int A = int.Parse(Console.ReadLine());
 
 if(A == 1)
@@ -43,4 +39,4 @@ else if(A == 2)
                         }else
                             {
                                 Console.WriteLine("Write the number from 1 to 7, try again!");
-                            }*/
+                            }
