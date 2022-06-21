@@ -1,46 +1,122 @@
-﻿//Task 10
+﻿//Task34
+//Задача 34: Задайте массив заполненный случайными
+//положительными трёхзначными числами. Напишите
+//программу, которая покажет количество чётных чисел в
+//массиве.
+//[345, 897, 568, 234] -> 2
 
-
-/*Console.WriteLine("Enter a three-digit number");
-int A = int.Parse(Console.ReadLine());
-
-A = (A / 10) % 10;
-Console.WriteLine("The second digit of the nimber is: " + A);*/
-
-///////////////////////////////////////////
-//Task 15
-
-/*Console.WriteLine("Write the number of the day of the week from 1 to 7");
-int A = int.Parse(Console.ReadLine());
-
-if(A == 1)
+/*void PrintArr(int[] array)
 {
-    Console.WriteLine("it is Monday");
-}
-else if(A == 2)
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.WriteLine("it is Tuesday");
+        Console.Write(array[i] + " ");
     }
-    else if(A == 3)
-        {
-            Console.WriteLine("it is Wednesday");
-        }
-        else if(A == 4)
-            {
-                Console.WriteLine("it is Thursday");
-            }
-            else if(A == 5)
-                {
-                    Console.WriteLine("it is Friday");
-                }
-                else if(A == 6)
-                    {
-                        Console.WriteLine("it is the Weekend - Saturday");
-                    }
-                    else if(A == 7)
-                        {
-                            Console.WriteLine("it is the Weekend - Sunday");
-                        }else
-                            {
-                                Console.WriteLine("Write the number from 1 to 7, try again!");
-                            }*/
+    Console.WriteLine();
+}
+void FillArr(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(100, 1000);
+    }
+}
+
+int[] numbers = new int[12];
+FillArr(numbers);
+PrintArr(numbers);
+
+int Positive = 0; 
+for (int i = 0; i < numbers.Length; i++)
+{
+    if(numbers[i] % 2 ==0  )
+    {
+        Positive++;
+    }
+}
+Console.WriteLine("Number of positive numbers: " + Positive);*/
+
+
+
+////////////////////////////////////////////////////////////////////////////
+//Task36
+
+//Задача 36: Задайте одномерный массив, заполненный
+//случайными числами. Найдите сумму элементов, стоящих
+//на нечётных позициях.
+//[3, 7, 23, 12] -> 19
+//[-4, -6, 89, 6] -> 0
+
+/*void PrintArr(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+void FillArr(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i]=new Random().Next(-9, 10);
+    }
+}
+
+int[] numbers = new int[10];
+FillArr(numbers);
+PrintArr(numbers);
+
+int Sum = 0;
+for (int i = 1; i < numbers.Length; i +=2)
+{ 
+    Sum += numbers[i];
+}
+
+Console.WriteLine("Summ of numbers with odd index: " + Sum);*/
+
+///////////////////////////////////////////////////////////////////////////////
+//Task38
+
+//Задача 38: Задайте массив вещественных чисел. Найдите
+//разницу между максимальным и минимальным
+//элементов массива.
+
+/*void PrintArray(double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+void FillArray(double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i]=Math.Round(Math.Round(new Random().NextDouble(),3) * 10, 2);
+    }
+}
+
+double[] numbers = new double[10];
+FillArray(numbers);
+PrintArray(numbers);
+
+double max = numbers[0];
+double min = numbers[0];
+for (int i = 0; i < numbers.Length; i++)
+{
+    if(max < numbers[i])
+    {
+        max = numbers[i];
+    }
+    if(min > numbers[i])
+    {
+        min = numbers[i];
+    }
+}
+
+Console.WriteLine("max elemet: " + max + " min element: " + min);
+double result = max - min;
+Console.WriteLine("Difference between max and min element: " + result);*/
